@@ -4,6 +4,8 @@
 # Copyright (c) Siemens AG, 2026
 # SPDX-License-Identifier: MIT
 
+set -x
+
 ISAR_DIR=$(readlink -f $(dirname $0)/..)
 
 TEST_CONTAINER_VERSION=$(cat ${ISAR_DIR}/testsuite/dockerdata/version)
