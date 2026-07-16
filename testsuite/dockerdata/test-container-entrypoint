@@ -94,7 +94,7 @@ cleanup_rootless_files()
 	if [ "${clean_rootless_files}" = 1 ]; then
 		find build \
 			\( ! -user "$(whoami)" -type d -prune \) \
-			-exec unshare --map-auto --map-root-user --keep-caps rm -rf {} \;
+			-exec ./scripts/isar-clean-builddir --rootless {} \;
 	fi
 
 	exit ${rc}
